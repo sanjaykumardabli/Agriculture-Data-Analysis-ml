@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Transparent Material Login Form</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'><link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+<style>
+   body  {
+background-image: url('static/f4.jpg');
+background-repeat:no-repeat;
+background-attachment: fixed;
+background-size: cover;
+/*height: 100%;*/
+/*  width: 100%;*/
+ }
+ select {
+height: 30px;
+  }
+form { 
+ 
+  margin-top: 0em;
+}
+</style>
+
+</head>
+
+<body>
+<!-- partial:index.partial.html -->
+
+<form class="login-form" action="/predict" method="post">
+ <div  align = "top">
+<img src="{{ url_for('static',filename='head.png') }}" />
+</div>
+<br><br><br>
+
+  
+  
+   <div align="center">
+ &nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <label > STATES </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+    <select name="state" >
+    <option value="1">Andaman and Nicobar Islands</option>
+    <option value="2">Andhra Pradesh</option>
+    <option value="3">Arunachal Pradesh</option>
+    <option value="4">Assam</option>
+	<option value="5">Bihar</option>
+	<option value="6">Chandigarh</option>
+    <option value="7">Chhattisgarh</option>
+    <option value="8">Dadra and Nagar Haveli</option>
+    <option value="9">Goa</option>
+	<option value="10">Gujarat</option>
+    <option value="11">Haryana</option>
+    <option value="12">Himachal Pradesh</option>
+    <option value="13">Jammu and Kashmir</option>
+    <option value="14">Jharkhand</option>
+	<option value="15">Karnataka</option>
+	<option value="16">Kerala</option>
+    <option value="17">Madhya Pradesh</option>
+    <option value="18">Maharashtra</option>
+    <option value="19">Manipur</option>
+	<option value="20">Meghalaya</option>
+	<option value="21">Mizoram</option>
+	<option value="22">Nagaland</option>
+	<option value="23">Odisha</option>
+	<option value="24">Puducherry</option>
+	<option value="25">Punjab</option>
+	<option value="26">Rajasthan</option>
+	<option value="27">Sikkim</option>
+	<option value="28">Tamil Nadu</option>
+	<option value="29">Telangana</option>
+	<option value="30">Tripura</option>
+	<option value="31">Uttar Pradesh</option>
+	<option value="32">Uttarakhand</option>
+	<option value="33">West Bengal</option>
+	
+	
+	
+	
+	
+	
+	
+	 </select>
+	</div>
+     
+	 <br><br>
+	<br>
+  
+    <div align="center">
+  <label > SEASON </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+     <select name="season">
+    <option value="1">Autumn</option>
+    <option value="2">Kharif</option>
+    <option value="3">Rabi</option>
+    <option value="4">Summer</option>
+  <option value="5">Winter</option>
+  </select>
+ </div> 
+  <br>
+  <br>
+  
+  
+  <div align="center">
+  <label > CROP </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
+    <select name="crop">
+    <option value="1">Banana</option>
+    <option value="2">Beans</option>
+    <option value="3">Black Pepper</option>
+    <option value="4">Bottle Gourd</option>
+	  <option value="5">Brinjal</option>
+	  <option value="7">Carrot</option>
+    <option value="6">Cabage</option>
+    <option value="8">Cashew nut</option>
+    <option value="10">Cocunut</option>
+    <option value="9">Cauliflower</option>
+    <option value="11">Cotton</option>
+    <option value="12">Dry Chilly</option>
+    <option value="14">Groundnut</option>
+    <option value="13">Ginger</option>
+    <option value="15">Jack Fruit</option>
+    <option value="16">Lemon</option>
+    <option value="17">Mango</option>
+	  <option value="18">Onion</option>
+    <option value="19">Paddy</option>
+    <option value="20">Papaya</option>
+    <option value="21">Pome Granet</option>
+    <option value="22">Potato</option>
+	  <option value="23">Ragi</option>
+    <option value="24">Rice</option>
+    <option value="25">Sapota</option>
+    <option value="26">Soyabean</option>
+    <option value="27">Sugarcane</option>
+    <option value="28">Sun Flower</option>
+    <option value="29">Sweet Potato</option>
+    <option value="30">Tea</option>
+    <option value="31">Tomato</option>
+    <option value="32">Turmaric</option>
+	  <option value="33">Wheat</option>
+	  
+	
+	 </select>
+	</div>
+	
+	<br><br>
+	<br>
+	
+	<div align="center">
+  
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	EXPECTED YIELD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input type="text" value="0" name="yeild" style="font-size:14pt;" />
+</div>
+<br>
+<br>
+
+
+	
+	
+	<div align="center">
+		
+<!--   <input type="radio" name="algorithms" value="" checked> SVM<br>
+  <input type="radio" name="algorithms" value=""> NB<br>
+  <input type="radio" name="algorithms" value=""> KNN<br><br> -->
+  
+  <button type="submit" value="Submt" class="btn">Submit</button> </div>
+</form>
+<!-- partial -->
+ </div>
+</body>
+</html>

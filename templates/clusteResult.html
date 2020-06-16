@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Transparent Material Login Form</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'><link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+<style>
+   body  {
+background-image: url('static/f4.jpg');
+background-repeat:no-repeat;
+background-attachment: fixed;
+background-size: cover;
+/*height: 100%;*/
+/*  width: 100%;*/
+ }
+form { 
+ 
+  margin-top: 50em;
+}
+
+
+</style>
+<script type="text/javascript">
+
+  function doSubmit(form) {
+    var urls = form['url'];
+    var i = urls && urls.length;
+    while (i--) {
+      if (urls[i].checked) {
+        window.location = urls[i].value;
+      }
+    }
+    return false;
+  }
+
+  </script>
+</head>
+
+<body>
+<!-- partial:index.partial.html -->
+<br><br>
+<form class="login-form" action="/" >
+ <div  align = "top">
+<img src="{{ url_for('static',filename='head.png') }}" />
+</div>
+
+ <div  align = "center"> 
+  <h1> Pie-Chart for cluster</h1>
+<img src="{{ url_for('static',filename='pie.jpg') }}" /></div>
+
+ <div  align = "center"> 
+  <h1> Bar-plot for Crop and Seasson</h1>
+<img src="{{ url_for('static',filename='bar.jpg') }}" /></div>
+ <div  align = "center"> 
+  <h1> Scatter plot for cluster data points</h1>
+<img src="{{ url_for('static',filename='sct.jpg') }}" /></div>
+
+	
+	
+	<div align="center">
+		
+
+  
+  <button type="submit" value="Submit" class="btn">Back</button> </div>
+</form>
+<!-- partial -->
+ </div>
+</body>
+</html>

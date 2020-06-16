@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Transparent Material Login Form</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'><link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+<style>
+   body  {
+background-image: url('static/f4.jpg');
+background-repeat:no-repeat;
+background-attachment: fixed;
+background-size: cover;
+/*height: 100%;*/
+/*  width: 100%;*/
+ }
+form { 
+ 
+  margin-top: 0em;
+}
+
+
+</style>
+<script type="text/javascript">
+
+  function doSubmit(form) {
+    var urls = form['url'];
+    var i = urls && urls.length;
+    while (i--) {
+      if (urls[i].checked) {
+        window.location = urls[i].value;
+      }
+    }
+    return false;
+  }
+
+  </script>
+</head>
+
+<body>
+<!-- partial:index.partial.html -->
+
+<form class="login-form" action="/" >
+ <div  align = "top">
+<img src="{{ url_for('static',filename='head.png') }}" />
+</div>
+<br><br><br>
+
+{%if re == 0%}
+<div  align = "center">
+<img src="{{ url_for('static',filename='f5.jpg') }}" />
+
+<h1  ><bold> {{ u }}</bold></h1> <br></div>
+{%elif re == 1%}
+<div  align = "center">
+<img src="{{ url_for('static',filename='f6.jpg') }}" />
+
+<h1  ><bold> {{ u }}</bold></h1> <br></div>
+{%elif re == 2%}
+<div  align = "center">
+<img src="{{ url_for('static',filename='f2.jpg') }}" />
+
+<h1  ><bold> {{ u }}</bold></h1> <br></div>
+{%elif re == 3%}
+<div  align = "center">
+<img src="{{ url_for('static',filename='f1.jpg') }}" />
+
+<h1  ><bold> {{ u }}</bold></h1> <br></div>
+{%elif re == 4%}
+<div  align = "center">
+<img src="{{ url_for('static',filename='f1.jpg') }}" />
+
+<h1  ><bold> {{ u }}</bold></h1> <br></div>
+{%endif%}
+
+	
+	
+	<div align="center">
+		
+
+  
+  <button type="submit" value="Submit" class="btn">Back</button> </div>
+</form>
+<!-- partial -->
+ </div>
+</body>
+</html>

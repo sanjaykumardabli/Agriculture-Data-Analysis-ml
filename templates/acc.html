@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+
+  <title>CodePen - Transparent Material Login Form</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'><link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+<style>
+ body  {
+background-image: url('static/f4.jpg');
+background-repeat:no-repeat;
+background-attachment: fixed;
+background-size: cover;
+/*height: 100%;*/
+/*  width: 100%;*/
+ }
+ input[type="radio"] {
+    -ms-transform: scale(2.5); /* IE 9 */
+    -webkit-transform: scale(2.5); /* Chrome, Safari, Opera */
+    transform: scale(2.5);
+}
+form { 
+ 
+  margin-top: 0em;
+}
+
+
+</style>
+<script type="text/javascript">
+
+  function doSubmit(form) {
+    var urls = form['url'];
+    var i = urls && urls.length;
+    while (i--) {
+      if (urls[i].checked) {
+        window.location = urls[i].value;
+      }
+    }
+    return false;
+  }
+
+  </script>
+</head>
+
+<body >
+<!-- partial:index.partial.html -->
+
+<form class="login-form" action="/accuray" method="post">
+ <div  align = "top">
+<img src="{{ url_for('static',filename='head.png') }}" />
+</div>
+<br><br><br>
+  
+
+
+	
+	
+	<div align="center">
+		
+  <input type="radio" name="accur" value="1" checked> &nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; K-NEAREST NEIGHBOURS <br>
+<br><br>
+
+<br><br>
+  <input type="radio" name="accur"  value="2"> &nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  NAIVE BAYES </a><br>
+ <br><br>
+ 
+ <br><br>
+  <input type="radio" name="accur" value="3" checked> &nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ SVM<br>
+ <br><br>
+   <button type="submit" value="Submit" class="btn">Submit</button> </div>
+</form>
+
+
+
+<!-- partial -->
+ </div>
+</body>
+</html>
